@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>meNu Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Noshin Chowdhury</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="index.html#one" class="active">Projects</a></li>
+						<!-- <li><a href="elements.html">Elements</a></li> -->
+					</ul>
+				</nav>
+			</header>
+
+			<div id="wrapper">
+				<section id="main" class="wrapper">
+					<div class="inner">
+						<h1 class="major">meNu Project</h1>
+						
+						<nav class="horizontal-nav">
+							<ul class="detail-nav">
+								<li class="project-detail"><a href="#introduction" class="scroll-link">Introduction</a></li>
+								<li class="project-detail"><a href="#user_experience" class="scroll-link">User Experience</a></li>
+								<li class="project-detail"><a href="#development" class="scroll-link">Development</a></li>
+								<li class="project-detail"><a href="#challenges" class="scroll-link">Challenges</a></li>
+								<li class="project-detail"><a href="#deployment" class="scroll-link">What's Next?</a></li>
+							</ul>
+						</nav>
+						<section id="introduction">
+							<h2 class="menu-section-title">Introduction</h2>
+							<p>
+								meNu is a social media app designed to bring food enthusiasts together by allowing them to share 
+								and discover recipes. This platform enables users to post pictures of their dishes, share 
+								detailed recipes, and engage with others through comments. Users can also create personalized 
+								profiles, showcasing their culinary creations in a dedicated list.
+							</p>
+							<h3>Features</h3>
+							<h4>Public Feed</h4>
+								<ul>
+									<li>Users can share images of their dishes along with detailed recipes.</li>
+									<li>Other users can comment on these posts, fostering a community of food lovers.</li>
+								</ul>
+							<h4>Profile Page</h4>
+								<ul>
+									<li>Each user has a customizable profile where they can personalize their information.</li>
+									<li>A list of all the recipes a user has posted will be displayed on their profile, making it easy to showcase their culinary skills.</li>
+								</ul>
+							<h4>Following</h4>
+								<ul>
+									<li>Users can follow each other to keep up with their favorite recipe creators and see their latest posts on their feed.</li>
+								</ul>
+							<h4>Search Bar</h4>
+								<ul>
+									<li>A powerful search feature allows users to find specific recipes by keywords, ingredients, or dish names in public posts.</li>
+								</ul>
+							<h3>User Story</h3>
+							<p>
+								<em>Amanda's Culinary Adventure - Busy working professional and aspiring chef</em></br>
+								She wants to: Easily share her quick and healthy recipes with others, discover new meal ideas, and connect with fellow food enthusiasts</br>
+								So that she can: Simplify her cooking routine, gain inspiration for creative dishes, and engage with a supportive community passionate about cooking
+							</p>
+							<h3>Application Structure, Stacks and Tech used</h3>
+								<ul>
+									<li>MongoDB</li>
+									<li>Axios</li>
+									<li>Express.js</li>
+									<li>Javascript</li>
+									<li>React</li>
+									<li>Mongoose</li>
+									<li>Vite</li>
+								</ul>
+
+							<h3>Development Status</h3>
+							<p>Currently, meNu is in the planning and initial development stages. The core features and architecture 
+								have been outlined, and the next steps involve building the frontend and backend components, 
+								integrating the database, and implementing the follow and search functionalities.
+							</p>
+
+							<h3>Conclusion</h3>
+							<p>
+								meNu aims to create a vibrant community where food enthusiasts can share their passion for cooking, 
+								discover new recipes, and connect with like-minded individuals. By leveraging modern web technologies 
+								like React and Express Mongoose, we plan to deliver a seamless and enjoyable user experience. 
+								This project showcases my ability to design and develop a full-stack application, emphasizing user 
+								interaction and community building.
+							</p>
+							
+							
+						</section>
+						<section id="user_experience">
+							<h2 class="menu-section-title">User Experience</h2>
+							<h4 class="menu-sub-section-title">WIREFRAME</h4>
+							<div class="ui-para brand">
+							</div>
+
+							<div class="ui-para">
+								<img src="images/menustart.png" alt="" style="width: 40%; height: auto;"/>
+
+							</div>
+							
+						
+					</div>
+				</section>
+
+				<h2 class="menu-section-title" style="padding: 65px; margin: 0;">Thank You!</h2>
+
+
+				<div id="wrapper">
+					<a href="#" id="back-to-top" class="back-to-top-button" style="display: none;"><i class="fas fa-arrow-up"></i></a>
+				</div>
+				
+				<!-- <a href="#" id="back-to-top" class="back-to-top-button" style="background-color: #e8e7dd;">Back to Top</a> -->
+			</div>
+
+			<script>
+				// Smooth scrolling function
+				const smoothScroll = (target, duration) => {
+					const targetSection = document.querySelector(target);
+					const targetPosition = targetSection.offsetTop;
+					const startPosition = window.pageYOffset;
+					const distance = targetPosition - startPosition;
+					let startTime = null;
+			
+					const animation = (currentTime) => {
+						if (startTime === null) startTime = currentTime;
+						const timeElapsed = currentTime - startTime;
+						const run = ease(timeElapsed, startPosition, distance, duration);
+						window.scrollTo(0, run);
+						if (timeElapsed < duration) requestAnimationFrame(animation);
+					};
+			
+					const ease = (t, b, c, d) => {
+						t /= d / 2;
+						if (t < 1) return c / 2 * t * t + b;
+						t--;
+						return -c / 2 * (t * (t - 2) - 1) + b;
+					};
+			
+					requestAnimationFrame(animation);
+				};
+			
+				// Smooth scrolling when a navigation link is clicked
+				const links = document.querySelectorAll('.scroll-link');
+				links.forEach((link) => {
+					link.addEventListener('click', (e) => {
+						e.preventDefault();
+						const targetId = link.getAttribute('href');
+						smoothScroll(targetId, 1000);
+					});
+				});
+
+				const backToTopButton = document.getElementById('back-to-top');
+				backToTopButton.addEventListener('click', (e) => {
+					e.preventDefault();
+					smoothScroll('#wrapper', 1000);
+				});
+
+				// Show/hide back to top button based on scroll position
+				window.addEventListener('scroll', () => {
+					if (window.scrollY > 500) {
+						backToTopButton.style.display = 'block';
+					} else {
+						backToTopButton.style.display = 'none';
+					}
+				});
+			</script>
+	
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+	
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
